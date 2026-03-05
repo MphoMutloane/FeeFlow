@@ -8,28 +8,40 @@ import { assets } from '../../assets/assets'
 const Landing = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
-      {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-purple-900 mb-6">
-            Welcome to <span className="text-purple-600">FeeFlow</span>
-          </h1>
+      {/* Hero Section with Background Image */}
+      <div 
+        className="relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(${assets.hero})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-purple-700 mb-6">
+              Welcome to <span className="text-purple-600">FeeFlow</span>
+            </h1>
 
-          <p className="text-xl md:text-2xl text-gray-600 mb-8">
-            Manage your tuition fees, view statements, and make secure payments online
-          </p>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              Manage your tuition fees, view statements, and make secure payments online
+            </p>
 
-          {/* CTA Button */}
-          <Link
-            to="/auth"
-            className="inline-block bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-4 rounded-full transition duration-200 font-medium shadow-lg hover:shadow-xl"
-          >
-            Get Started
-          </Link>
+            <Link
+              to="/auth"
+              className="inline-block bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-4 rounded-full transition duration-200 font-medium shadow-lg hover:shadow-xl"
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
+      </div>
 
+      {/* Rest of your content (unchanged) */}
+      <div className="container mx-auto px-4 py-16">
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <FeatureCard
             icon={assets.money}
             title="View Balance"

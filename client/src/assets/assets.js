@@ -12,6 +12,7 @@ import document_icon from './document_icon.svg'
 import money from './money.svg'
 import card from './card.svg'
 import histogram from './histogram.svg'
+import hero from './hero.jpg'
 import star from './rating_star.svg'
 import star_blank from './star_dull_icon.svg'
 import profile_img_1 from './profile_img_1.png'
@@ -56,6 +57,7 @@ export const assets = {
     money,
     card,
     histogram,
+    hero,
     star,
     star_blank,
     profile_img_1,
